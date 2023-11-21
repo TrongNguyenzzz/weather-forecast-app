@@ -1,6 +1,7 @@
 import './App.css';
 import Search from './components/search/Search';
 import { weatherAPI, apiKey } from './api';
+import Forecast from './components/forecast/forecast';
 import CurrentWeather from './components/currentWeather/currentWeather';
 import { useState } from 'react';
 
@@ -15,7 +16,7 @@ function App() {
     
     const weatherResult = fetch(`${weatherAPI}/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`)
 
-    const weatherForecast = fetch(`${weatherAPI}/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}`)
+    const weatherForecast = fetch(`${weatherAPI}/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`)
 
     Promise.all([weatherResult, weatherForecast])
       .then(async (response) => {
@@ -36,6 +37,7 @@ function App() {
       <img src='https://img.freepik.com/premium-vector/weather-cloud-sun-rain-lightning-logo-design-symbol-icon-template_23729-1786.jpg' alt='' className='logo-img'/>
       <Search onSearchChange={handleOnSearchChange}/>
       {currentWeather && <CurrentWeather data={currentWeather}/>}
+      {forecast && <Forecast data={forecast}/>}
     </div>
   );
 }

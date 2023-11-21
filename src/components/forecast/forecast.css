@@ -1,0 +1,58 @@
+.forecast-label {
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.daily-item {
+    background-color: white;
+    border-radius: 15px;
+    height: 50px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-left: 30px;
+}
+
+.forecast-weather {
+    padding-top: 50px;
+}
+
+.icon-daily {
+    width: 55px;
+}
+
+.day {
+    color: #212121;
+    font-weight: 600;
+    margin-left: 15px;
+    flex: 1;
+}
+
+.description {
+    margin-right: 100px;
+    text-align: left;
+}
+
+.min-max {
+    color: #757575;
+    margin-right: 20px;
+    text-align: right;
+}
+
+.mid-forecast {
+    padding-top: 20px;
+}
+
+.daily-details-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-left: 108px;
+    grid-row-gap: 5px;
+}
+
+.daily-details-grid-item {
+    font-weight: 300;
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+}
