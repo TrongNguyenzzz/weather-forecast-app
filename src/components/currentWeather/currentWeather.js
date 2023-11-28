@@ -1,13 +1,21 @@
-import "./currentWeather.css"
-import sunny from "../../icon/sunny.png";
+import "./currentWeather.css";
+import { getCurrentDate } from "../../App";
+import { getDayInWeek } from "../../App";
+import { useState } from "react";
 
 const CurrentWeather = ({data}) => {
+
+    const [currentDate, setCurrentDate] = useState(getCurrentDate());
+
+    const [currentDay, setCurrentDay] = useState(getDayInWeek());
+
 
     return (
         <div className="weather">
             <div className="top-weather">
                 <div>
                     <p className="city"> {data.city} </p>
+                    <p className="weather-time"> {currentDate} | {currentDay} </p>
                     <p className="weather-description"> {data.weather[0].description} </p>
                 </div>
                 <img alt="weather" className="weather-icon" src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} />
@@ -16,10 +24,6 @@ const CurrentWeather = ({data}) => {
             <div className="bottom-weather">
                 <p className="temperature"> {Math.round(data.main.temp)}°C  </p>
                 <div className="detail-weather">
-                    <div className="parameter-row">
-                        <span className="parameter-label"> Details </span>
-                    </div>
-
                     <div className="parameter-row">
                         <span className="parameter-label"> Feels like </span>
                         <span className="parameter-value"> {Math.round(data.main.feels_like)}°C </span>

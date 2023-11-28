@@ -5,17 +5,25 @@ const Forecast = ({data}) => {
 
     const temp = data.list.splice(0, 7);
 
-    const weeksday = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    const weeksday = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"];
 
-    const dayInWeek = new Date().getDay();
+    const currDate = new Date();
+
+    const dayInWeek = currDate.getDay();
+
+    const today = currDate.getDate();
 
     const forecastDays = weeksday.slice(dayInWeek, weeksday.length).concat(weeksday.slice(0, dayInWeek));
 
-    console.log(data)
+    const month = currDate.getMonth();
+
+    const year = currDate.getFullYear();
+
+    const numDays = (y, m) => new Date(y, m, 0).getDate();
 
     return(
         <div className="forecast-weather">
-            <label className="forecast-label"> Daily forecast </label>
+            <label className="forecast-label"> Weekly forecast </label>
             <div className="mid-forecast">
             <Accordion allowZeroExpanded>
                 {data.list.splice(0, 7).map((item, idx) => (
@@ -24,7 +32,8 @@ const Forecast = ({data}) => {
                             <AccordionItemButton>
                                 <div className="daily-item">
                                     <img alt="weather" className="icon-daily" src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}/>
-                                    <label className="day"> {forecastDays[idx]} </label>
+                                    {today + idx + 1 <= numDays(year, month) && <label className="day"> {forecastDays[idx]} | {today + idx + 1} </label>}
+                                    {today + idx + 1 > numDays(year, month) && <label className="day"> {forecastDays[idx]} | {today + idx + 1 - numDays(year, month)} </label>}
                                     <label className="description"> {item.weather[0].description} </label>
                                     <label className="min-max"> 
                                         {Math.round(item.main.temp_min)}°C / {" "}

@@ -2,8 +2,8 @@
     width: 300px;
     border-radius: 6px;
     box-shadow: 10px -2px 20px 2px rgb(0 0 0 /30%);
-    color: #fff;
-    background-color: #333;
+    color: black;
+    background-color: #C8C8C8;
     margin: 20px auto 0 auto;
     padding: 0 20px 20px 20px;
 }
@@ -21,6 +21,7 @@
 }
 
 .city {
+    padding-top: 20px;
     font-weight: 600;
     font-size: 18px;
     line-height: 1;
@@ -64,5 +65,9 @@
 .parameter-value {
     text-align: right;
     font-weight: 600;
+    font-size: 12px;
+}
+
+.weather-time {
     font-size: 12px;
 }
