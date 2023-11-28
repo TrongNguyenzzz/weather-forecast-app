@@ -15,7 +15,7 @@ const CurrentWeather = ({data}) => {
             <div className="top-weather">
                 <div>
                     <p className="city"> {data.city} </p>
-                    <p className="weather-time"> {currentDate} | {currentDay} </p>
+                    <p className="weather-time"> {currentDay} | {currentDate} </p>
                     <p className="weather-description"> {data.weather[0].description} </p>
                 </div>
                 <img alt="weather" className="weather-icon" src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} />
