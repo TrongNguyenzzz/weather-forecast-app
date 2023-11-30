@@ -9,7 +9,6 @@ const CurrentWeather = ({data}) => {
 
     const [currentDay, setCurrentDay] = useState(getDayInWeek());
 
-
     return (
         <div className="weather">
             <div className="top-weather">

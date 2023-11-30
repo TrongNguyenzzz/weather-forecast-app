@@ -3,6 +3,7 @@ import Search from './components/search/Search';
 import { weatherAPI, apiKey } from './api';
 import Forecast from './components/forecast/forecast';
 import CurrentWeather from './components/currentWeather/currentWeather';
+import SummaryWeather from './components/summary/Summary';
 import { useState } from 'react';
 
 export function getCurrentDate() {
@@ -53,8 +54,6 @@ function App() {
 
     const weatherForecast = fetch(`${weatherAPI}/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`)
 
-
-
     Promise.all([weatherResult, weatherForecast])
       .then(async (response) => {
 
@@ -75,7 +74,6 @@ function App() {
       <img src='https://cdn3.iconfinder.com/data/icons/luchesa-vol-9/128/Weather-512.png' alt='' className='logo-img'/>
       <h2 className='app-title'> Weather forecast </h2>
       <Search onSearchChange={handleOnSearchChange}/>
-
       {currentWeather && <CurrentWeather data={currentWeather}/>}
       {forecast && <Forecast data={forecast}/>}
     </div>

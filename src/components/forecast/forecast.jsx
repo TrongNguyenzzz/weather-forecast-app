@@ -1,5 +1,6 @@
 import { Accordion, AccordionItem, AccordionItemButton, AccordionItemHeading, AccordionItemPanel } from "react-accessible-accordion";
 import "./forecast.css";
+import SummaryWeather from "../summary/Summary";
 
 const Forecast = ({data}) => {
 
@@ -21,12 +22,14 @@ const Forecast = ({data}) => {
 
     const numDays = (y, m) => new Date(y, m, 0).getDate();
 
+    const useData = data.list.splice(0,7);
+
     return(
         <div className="forecast-weather">
             <label className="forecast-label"> Weekly forecast </label>
             <div className="mid-forecast">
             <Accordion allowZeroExpanded>
-                {data.list.splice(0, 7).map((item, idx) => (
+                {useData.map((item, idx) => (
                     <AccordionItem key={idx}>
                         <AccordionItemHeading>
                             <AccordionItemButton>
@@ -79,6 +82,10 @@ const Forecast = ({data}) => {
                     </AccordionItem>
                 ))}
             </Accordion>
+            </div>
+
+            <div className="forecast-summary">
+                <SummaryWeather forecastSet={useData}/>
             </div>
         </div>
     )

@@ -1,0 +1,24 @@
+.weather-title {
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.image {
+    width: 70px;
+}
+
+.summary-detail {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+}
+
+.summary-weather {
+    padding-bottom: 50px;
+}
+
+.class-temp {
+    padding-left: 30px;
+}
