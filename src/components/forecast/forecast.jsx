@@ -16,7 +16,7 @@ const Forecast = ({data}) => {
 
     const forecastDays = weeksday.slice(dayInWeek, weeksday.length).concat(weeksday.slice(0, dayInWeek));
 
-    const month = currDate.getMonth();
+    const month = currDate.getMonth() + 1;
 
     const year = currDate.getFullYear();
 
