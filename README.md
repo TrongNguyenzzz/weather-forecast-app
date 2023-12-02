@@ -1,31 +1,16 @@
-# Create React App
+# Weather Forecast Website
 
-This directory is a brief example of a [Create React App](https://github.com/facebook/create-react-app) site that can be deployed to Vercel with zero configuration.
+## Demo Link:
 
-## Deploy Your Own
+### Introduction to the website
 
-Deploy your own Create React App project with Vercel.
+This website is user-friendly and designed to help people find information about the weather in their cities. The website displays some basic information about the weather during the day such as the current temperature, how it feels like, the current wind speed, etc ... 
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/create-react-app&template=create-react-app)
+![Screenshot 2023-12-01 at 5 23 45 PM](https://github.com/TrongNguyenzzz/weather-forecast-app/assets/89328535/37a6c2d7-daa2-48d1-a4b0-0582bfd95a9b)
 
-_Live Example: https://create-react-template.vercel.app/_
+The website also contains information for the weather forecast of the next week
 
-## Available Scripts
+![Screenshot 2023-12-01 at 5 29 36 PM](https://github.com/TrongNguyenzzz/weather-forecast-app/assets/89328535/fb4cb320-3ef1-4307-b336-95a430ff0b1d)
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes. You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode. See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.
-
-It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.
