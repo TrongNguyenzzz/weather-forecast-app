@@ -19,5 +19,5 @@ The last part of the website is the summary of the weather of the next week. The
 
 ![Screenshot 2023-12-03 at 4 55 21 PM](https://github.com/TrongNguyenzzz/weather-forecast-app/assets/89328535/721344c0-d18f-4b6e-9bbf-85665118d659)
 
-
+I hope you enjoy the website! 
 
