@@ -21,3 +21,9 @@ The last part of the website is the summary of the weather of the next week. The
 
 I hope you enjoy the website! 
 
+---
+
+## Repository Guidelines
+
+- **No file in this repository should ever exceed 1000 lines.** If a file approaches that limit, refactor it into smaller, more focused modules.
+
