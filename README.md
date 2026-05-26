@@ -99,6 +99,10 @@ The app will open at [http://localhost:3000](http://localhost:3000).
 
 ![Weekly Summary](https://github.com/TrongNguyenzzz/weather-forecast-app/assets/89328535/721344c0-d18f-4b6e-9bbf-85665118d659)
 
+## Author
+
+This README was authored by [Kiro](https://kiro.dev), an AI-powered development assistant.
+
 ## License
 
 This project is for educational purposes.
